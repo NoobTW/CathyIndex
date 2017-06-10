@@ -12,6 +12,7 @@ function getG0v(name, cb){
 				position: { lat: parseFloat(d[i].LatLng.lat), lng: parseFloat(d[i].LatLng.lng) },
 				label: d[i].Data.Dust2_5 + '',
 				map: map,
+				icon: 'pic/horse-4-48.ico'
 			}));
 		});
 	});
@@ -134,12 +135,12 @@ function initMap(){
 	});
 	// getG0v('lass');
 	// getG0v('lass-4u');
-	// getG0v('lass-maps');
+	getG0v('lass-maps');
 	// getG0v('asus-airbox');
 	// getG0v('edimax-airbox');
 	// getG0v('independent');
 	// getG0v('probecube');
-	getFactoryData();
+	//getFactoryData();
 }
 
 $(function(){
