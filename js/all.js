@@ -7,7 +7,7 @@ var markers = {
 
 function getG0v(name, cb){
 	var colorArr = ['#0000CC','#0133CC','#0166FF','#0099FF','#32CBFE','#65FE9A','#99FF66','#CCFF33','#FFFF01','#FF9933','#FF3301','#C90000','#800000'];
-	$.getJSON('http://cors.lagden.in/call?url=https://airmap.g0v.asper.tw/json/' + name +'.json?raw=1', function(d){
+	$.getJSON('https://crossorigin.me/https://airmap.g0v.asper.tw/json/' + name +'.json?raw=1', function(d){
 		Object.keys(d).forEach((i) => {
 			//color
 			var pm25 = Number(d[i].Data.Dust2_5);
