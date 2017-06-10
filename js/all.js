@@ -148,14 +148,14 @@ function initMap(){
 			}
 		]
 	});
-	// getG0v('lass');
-	// getG0v('lass-4u');
-	// getG0v('lass-maps');
-	// getG0v('asus-airbox');
-	// getG0v('edimax-airbox');
-	// getG0v('independent');
-	// getG0v('probecube');
-	// getFactoryData();
+	getG0v('lass');
+	getG0v('lass-4u');
+	getG0v('lass-maps');
+	getG0v('asus-airbox');
+	getG0v('edimax-airbox');
+	getG0v('independent');
+	getG0v('probecube');
+	getFactoryData();
 }
 
 $(function(){
