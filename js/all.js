@@ -37,6 +37,7 @@ function getG0v(name, cb){
 				//label: d[i].Data.Dust2_5 + '',
 				map: map,
 				icon: 'data:image/svg+xml;charset=utf-8,<svg width="20" height="20" viewBox="-55 -55 110 110" xmlns="http://www.w3.org/2000/svg">	<circle r="40" stroke="#4F595D" stroke-width="2" fill="' + color +'" /><text x="0" y="13" fill="' + fgColor + '" text-anchor="middle" style="font-size:45px; font-weight: 800; ">' + d[i].Data.Dust2_5 + '</text></svg>'
+				//icon: 'pic/factory.png'
 			}));
 		});
 	});
