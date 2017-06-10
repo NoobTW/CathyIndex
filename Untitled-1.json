@@ -1,0 +1,62 @@
+const dataList = [];
+getData('lass', function(data){
+	for(var i=0;i<data.length;i++){
+		var d = {};
+		d.SiteName = data.device_id;
+		d.SiteGroup = 'LASS';
+		d.LatLng = {
+			lat: data.gps_lat,
+			lng: data.gps_lon,
+		};
+		d.Marker = 'LASS';
+		d.Data = {
+			Create_at: moment(new Date(data.timestamp)).format(),
+			Temperature: data.s_t0,
+			Humidity: data.s_h0 || d.s_h2,
+			Dust2_5: data.s_0,
+		};
+		d.uniqueKey: data.device_id;
+		dataList.push(d);
+	}
+});
+getData('lass-4u', function(){
+	for(var i=0;i<data.length;i++){
+		var d = {};
+		d.SiteName = data.SiteName;
+		d.SiteGroup = 'LASS-4U';
+		d.LatLng = data.LagLng;
+		d.Marker = 'LASS';
+		d.Data = {
+			Create_at: moment(new Date(data.Data.Create_at)).format(),
+			Temperature: data.Temperature,
+			Humidity: data.Humidity,
+			Dust2_5: data.Dust2_5,
+		};
+		d.uniqueKey: data.uniqueKey;
+		dataList.push(d);
+	}
+});
+getData('lass-maps', function(){
+	for(var i=0;i<data.length;i++){
+		var d = {};
+		d.SiteName = data.SiteName;
+		d.SiteGroup = 'LASS-MAPS';
+		d.LatLng = data.LagLng;
+		d.Marker = 'LASS';
+		d.Data = {
+			Create_at: moment(new Date(data.Data.Create_at)).format(),
+			Temperature: null,
+			Humidity: null,
+			Dust2_5: data.Dust2_5,
+		};
+		d.uniqueKey: data.uniqueKey;
+		dataList.push(d);
+	}
+});
+
+https://airmap.g0v.asper.tw/json/lass.json?raw=1
+https://airmap.g0v.asper.tw/json/lass-4u.json?raw=1
+https://airmap.g0v.asper.tw/json/lass-maps.json?raw=1
+https://airmap.g0v.asper.tw/json/asus-airbox.json?raw=1
+https://airmap.g0v.asper.tw/json/independent.json?raw=1
+https://airmap.g0v.asper.tw/json/probecube.json?raw=1
