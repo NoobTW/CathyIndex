@@ -58,3 +58,17 @@ section p{
 	letter-spacing: 1px;
 	line-height: 2rem;
 }
+
+.levels{
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	width: 390px;
+	z-index: 99;
+}
+
+.level{
+	width: 30px;
+	display: inline-block;
+	text-align: center;
+}
