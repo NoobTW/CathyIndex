@@ -51,22 +51,14 @@ function getFactoryData(cb){
 		async: true,
 		success: function(d){
 			for(let j=0;j<d.length;j++){
-				if(d.AirRegisteredStatus !== ''){
-					addr2Marker(d.Address);
-					console.log(d.Address);
-				}
+				markers.factory.push(new google.maps.Marker({
+					map: map,
+					position: {
+						lat: parseFloat(d[j].Lat),
+						lng: parseFloat(d[j].Lng),
+					},
+				}));
 			}
-		}
-	});
-}
-
-function addr2Marker(addr){
-	Geocoder.geocode({address: addr}, function(res, status){
-		if(status === google.maps.GeocoderStatus.OK){
-			markers.factory.push(new google.maps.Marker({
-				map: map,
-				position: results[0].geometry.location
-			}));
 		}
 	});
 }
@@ -157,14 +149,14 @@ function initMap(){
 			}
 		]
 	});
-	getG0v('lass');
-	getG0v('lass-4u');
-	getG0v('lass-maps');
-	getG0v('asus-airbox');
-	getG0v('edimax-airbox');
-	getG0v('independent');
-	getG0v('probecube');
-	//getFactoryData();
+	// getG0v('lass');
+	// getG0v('lass-4u');
+	// getG0v('lass-maps');
+	// getG0v('asus-airbox');
+	// getG0v('edimax-airbox');
+	// getG0v('independent');
+	// getG0v('probecube');
+	getFactoryData();
 }
 
 $(function(){
